@@ -42,8 +42,15 @@ const orders = () => {
                     : order.status == 'Completed' 
                     ? 'bg-blue-200 p-2 rounded-lg' 
                     : 'bg-yellow-200 p-2 rounded-lg'
-                  }>${order.status}</span>
+                  }>
+                    ${order.status}
+                  </span>
                 </p>
+                <p className='hidden md:flex'>${order.date}</p>
+                <div className='sm:flex hidden justify-between items-center'>
+                  <p>${order.method}</p>
+                  <BsThreeDotsVertical />
+                </div>
               </li>
             ))}
           </ul>
